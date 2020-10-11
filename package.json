@@ -1,0 +1,32 @@
+{
+  "name": "html-invitation",
+  "version": "1.0.0",
+  "description": "A system to serve an password protected invitation that doens't require a server",
+  "author": "Jason Sperske",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "node ./node_modules/gulp-cli/bin/gulp.js",
+    "buildWatch": "node ./node_modules/gulp-cli/bin/gulp.js watch"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "confetti-js": "^0.0.18",
+    "crypto-js": "^4.0.0",
+    "domjson": "^0.1.2",
+    "font-awesome": "^4.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-flatten": "^0.4.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-terser": "^1.4.0"
+  }
+}

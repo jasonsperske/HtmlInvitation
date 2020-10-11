@@ -1,0 +1,54 @@
+<link href="css/sperske.min.css" rel="stylesheet">
+<main role="main" id='payload'>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Your Invitation Here!</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <h2>This HTML can really be anything you want!</h2>
+            <p>
+              As long as you put the HTML inside of the <code>&lt;main role="main" id='payload'&gt;&lt;/main&gt;</code> you are free to include anything!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="title">Page Title</label>
+        <input type="text" class="form-control" id="title">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="text" class="form-control" id="password">
+      </div>
+      <button type="submit" class="btn btn-primary" id="encrypt">Encrypt</button>
+      <div class="form-group">
+        <label for="payload">Copy this payload into your <code>index.html</code></label>
+        <textarea class="form-control" id="payloadOuput" rows="5"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/invitation.min.js"></script>
+<script>
+  document.getElementById("encrypt").onclick = function() {
+    var payload = CryptoJS.AES.encrypt(
+                    JSON.stringify(
+                      {
+                        title: document.getElementById("title").value,
+                        invitation: domJSON.toJSON(document.getElementById('payload'))
+                      }), document.getElementById("password").value).toString();
+    document.getElementById('payloadOuput').value = "var payload = \"" + payload + "\";"
+  }
+</script>
