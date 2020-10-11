@@ -2,7 +2,7 @@
 A system to host an HTML based invitation that is password protected but doesn't require a server.
 
 # How to see an invitation
-Put the files onto any HTTP server (seriously any, this only uses HTTP GET so something like (darkhttpd)[https://unix4lyfe.org/darkhttpd/] is perfect). Access the `index.html` document and put in the configured password (in the example file there is already a payload with the password "password").  Click "Sign In" and the invitation is decrypted.
+Put the files onto any HTTP server (seriously any, this only uses HTTP GET so something like [darkhttpd](https://unix4lyfe.org/darkhttpd/) is perfect). Access the `index.html` document and put in the configured password (in the example file there is already a payload with the password "password").  Click "Sign In" and the invitation is decrypted.
 
 # How To Set Up (easy)
 First start a simple HTTP server using the `public` folder as the document root. Then edit the file `public/invitation.html`.  You can see exactly how your invitation will look. You can configure a secret passphrase and a protected title to appear when the password is correctly entered. When you satisfied with your invitation, click on the "Encrypt" button and get the encrypted payload to add to your `index.html` file.  Upload the files inside of the `public` folder to any static web host (don't upload the invitation.html as it is not protected).  Then you can share that URL as a password protected invitation.
